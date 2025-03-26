@@ -17,5 +17,6 @@ public class Board {
     @Column(name = "board_id", nullable = false)
     private Integer boardId;
 
+    @Column(nullable = false)
     private String name;
 }
