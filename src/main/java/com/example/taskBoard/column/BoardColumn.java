@@ -7,6 +7,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import static jakarta.persistence.EnumType.STRING;
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -22,9 +24,10 @@ public class BoardColumn {
     @Column(nullable = false)
     private String name;
 
-    @Column(nullable = false)
+    @Column(name = "column_order", nullable = false)
     private Integer order;
 
+    @Enumerated(STRING)
     @Column(nullable = false)
     private BoardColumnType type;
 

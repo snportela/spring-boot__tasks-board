@@ -8,6 +8,8 @@ public record BoardColumnDto(
 
         String name,
 
+        Integer order,
+
         BoardColumnType type,
 
         BoardDto board
